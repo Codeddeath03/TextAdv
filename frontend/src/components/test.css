@@ -1,0 +1,168 @@
+/* test.css */
+
+.tosty {
+  background-color: #202020 !important; /* Set the background */
+  height:85vh;
+  margin: 0 auto; /* Center the tosty horizontally */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align items to the top */
+  padding-top: 20px; /* Optional: Add some padding from the top */
+}
+
+
+
+.tosty .pixel-box {
+  position: relative;
+  width: 100%;
+  height: auto; /* Allow height to adjust based on content */
+  padding: 20px; /* Padding inside the pixel box */
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 0 0 0 4px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+.tosty .click-to-continue{
+  cursor: pointer;
+}
+
+.tosty .triangle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 35px solid black;
+}
+
+.tosty .continue {
+  position: absolute;
+  bottom: 16px;
+  left: calc(50% + 611px);
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 30px;
+}
+.tosty .corner {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-color: black;
+  }
+  
+  .tosty .top-left {
+    top: -4px;
+    left: -4px;
+  }
+  
+  .tosty .top-right {
+    top: -4px;
+    right: -4px;
+  }
+  
+  .tosty .bottom-left {
+    bottom: -4px;
+    left: -4px;
+  }
+  
+  .tosty .bottom-right {
+    bottom: -4px;
+    right: -4px;
+  }
+  
+
+
+
+
+  .tosty .story-text {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: black;
+}
+/*
+.click-to-continue {
+  font-size: 1.1rem;
+  color: #ffcc00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+*/
+/* Separate options box below the story */
+.tosty .options-container {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 35px;
+  background-color: #202020; /* Light gray, more subtle than white */
+  border-top: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Automatically adjusts */
+}
+.tosty .story-container{
+  flex-direction: column;
+}
+
+/* Flexbox for buttons */
+.tosty .option-button {
+  background-color: #dcdcdc;
+  border: 2px solid #0b421b;
+  color: #2b3e50;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  margin: 10px auto;/* Add spacing between buttons */
+  font-family: "Silkscreen", sans-serif; /* Retro game font */
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.tosty .option-button:hover {
+  background-color: #c4c4c4; /* Slightly darker gray */
+  transform: scale(1.05);
+}
+
+
+.tosty .end-buttons {
+  margin-top: 20px;
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+.tosty .close-button, 
+.tosty .replay-button {
+  cursor: pointer;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #28a745; /* Default for close button */
+  color: white;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.tosty .replay-button {
+  background-color: #ffc107; /* Default for replay button */
+}
+
+.tosty .close-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+.tosty .replay-button:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+  transform: scale(1.05);
+}

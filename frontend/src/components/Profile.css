@@ -1,0 +1,98 @@
+/* Profile.css */
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.profile-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-balance {
+  font-size: 1.2em;
+  color: #1abc9c;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #252121;
+  color: #ecf0f1;
+  border: 1px solid #1abc9c;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.profile-dropdown p {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-dropdown p:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+/* Notification Box */
+.notification-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 1rem;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+/* Animation for fade-in and fade-out effect */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rgbChange {
+  0% { color: rgb(255, 0, 0); }    /* Red */
+  33% { color: rgb(0, 255, 0); }   /* Green */
+  66% { color: rgb(0, 0, 255); }   /* Blue */
+  100% { color: rgb(255, 0, 0); }  /* Back to Red */
+}
+
+/* Apply the RGB color animation when the balance is updated */
+.balance-updated {
+  animation: rgbChange 2s infinite; /* Change colors every 2 seconds */
+  transition: color 0.5s ease; /* Smooth transition for color change */
+}
